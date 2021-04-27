@@ -5,7 +5,7 @@ last_digit = 0
 if number < 0:
     last_digit = -number % 10
     last_digit *= -1
-else last_digit
+else last_digit:
     last_digit = number % 10
 if last_digit < 6:
     print("Last digit of {:d}".format(number), end='')
