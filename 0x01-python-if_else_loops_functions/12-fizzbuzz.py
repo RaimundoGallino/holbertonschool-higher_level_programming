@@ -9,6 +9,6 @@ def fizzbuzz():
             print("Buzz ", end='')
         else:
             print("{} ".format(fb), end='')
-        if fb != 100
-            print("")
+        if fb != 100:
+            print(" ")
     
