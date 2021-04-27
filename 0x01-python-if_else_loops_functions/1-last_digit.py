@@ -11,11 +11,11 @@ if last_digit < 6:
     print("Last digit of {:d}".format(number), end='')
     print("is {:d}".format(last_digit), end='')
     print("and is less than 6 and not 0")
-if last_digit% 10 == 0:
+if last_digit == 0:
     print("Last digit of {:d}".format(number), end='')
     print("is {:d}".format(last_digit), end='')
     print("and is 0")
-if last_digit % 10 > 5:
+if last_digit > 5:
     print("Last digit of {:d}".format(number), end='')
     print("is {:d}".format(last_digit), end='')
     print("and is greater than 5")
