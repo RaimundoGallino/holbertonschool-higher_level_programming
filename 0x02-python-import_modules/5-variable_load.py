@@ -2,4 +2,4 @@
 if __name__ == "__main__":
     import variable_load_5 as variable
     var = variable.a
-    print(var) 
+    print(var)
