@@ -4,5 +4,6 @@ if __name__ == "__main__":
     argc = len(argv)
     if (argc == 0):
         print("0")
-    for count in range(1, argc + 1):
-        print("{}".format(argv[count] + argv[count + 1]))
+    for count in range(1, argc):
+        sum += int(argv[count])
+    print("{}".format(sum))
