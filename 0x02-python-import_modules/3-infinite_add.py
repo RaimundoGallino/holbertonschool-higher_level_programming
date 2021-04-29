@@ -5,4 +5,4 @@ if __name__ == "__main__":
     if (argc == 0):
         print("0")
     for count in range(1, argc + 1):
-        print("{}".format(argv[count] + argv[count + 1)))
+        print("{}".format(argv[count] + argv[count + 1]))
