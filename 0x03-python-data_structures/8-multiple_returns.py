@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-ef multiple_returns(sentence):
+def multiple_returns(sentence):
     if sentence:
         return (len(sentence), sentence[0])
     else:
