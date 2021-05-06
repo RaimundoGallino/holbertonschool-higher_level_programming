@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
             if letter == "V": value += 5
             if letter == "X": value += 10
             if letter == "L": value += 50
-            if letter == "V": value += 100
+            if letter == "C": value += 100
             if letter == "D": value += 500
             if letter == "M": value += 1000
         return value
