@@ -4,7 +4,7 @@
 
 class Square:
     '''define the square class'''
-    def __init__(self, size):
+    def __init__(self, size=0):
         '''__init__ function'''
         self.__size = 0
         self.__size = size
