@@ -20,7 +20,7 @@ class Square:
         elif len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (isinstance(position[0], int) is False or
-            isinstance(position[1], int) is False):
+                isinstance(position[1], int) is False):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (position[0] < 0 or position[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -30,7 +30,7 @@ class Square:
 
     def area(self):
         '''defines the area of the square'''
-        return self.__size **2
+        return self.__size ** 2
 
     @property
     def size(self):
@@ -59,7 +59,7 @@ class Square:
         elif len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (isinstance(value[0], int) is False or
-            isinstance(value[1], int) is False):
+                isinstance(value[1], int) is False):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
