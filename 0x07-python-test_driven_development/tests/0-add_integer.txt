@@ -1,0 +1,33 @@
+"""
+>>> add_integer = __import__('0-add_integer').add_integer
+#checking normal case
+>>> add_integer(1, 2)
+3
+>>> add_integer(1, -2)
+-1
+>>> add_integer(-2, -2)
+-4
+>>> add_integer(1e1000, 6)
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer([1, 3], [4, 5])
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(2.4, 2)
+4
+>>> add_integer(3, 'c')
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(None, 9)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer('lalala', 8)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+"""
