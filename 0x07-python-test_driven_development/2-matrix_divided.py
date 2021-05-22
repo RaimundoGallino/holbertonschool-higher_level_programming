@@ -3,6 +3,7 @@
 Deviding a matrix by a selected div
 """
 
+
 def matrix_divided(matrix, div):
     """Error prouf function"""
 
@@ -24,5 +25,6 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix \
 (list of lists) of integers/floats")
 
-    return list(map(lambda x: list(map(lambda y: \
-round((y / div), 2), x)), matrix))
+    return list(
+        map(lambda x: list(map(lambda y: round((y / div), 2), x)), matrix)
+        )
