@@ -10,20 +10,18 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-
     def __init__(self, width=0, height=0):
         '''__init__ function'''
-        
+
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-
 
     @property
     def width(self):
         '''defines the width of the rectangle'''
         return self.__width
-    
+
     @property
     def height(self):
         '''defines the height of the rectangle'''
@@ -90,6 +88,7 @@ class Rectangle:
                 return rect_1
             else:
                 return rect_2
+
     @classmethod
     def square(cls, size=0):
         return cls(size, size)

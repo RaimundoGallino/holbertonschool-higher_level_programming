@@ -12,7 +12,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         '''__init__ function'''
-        
+
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -21,7 +21,7 @@ class Rectangle:
     def width(self):
         '''defines the width of the rectangle'''
         return self.__width
-    
+
     @property
     def height(self):
         '''defines the height of the rectangle'''
