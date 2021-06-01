@@ -8,7 +8,9 @@ class; otherwise False.
 
 
 def is_kind_of_class(obj, a_class):
-    if (isinstance(obj, a_class) != 0):
+    """ is kind of class function"""
+
+    if (isinstance(obj, a_class)):
         return True
     else:
         return False
