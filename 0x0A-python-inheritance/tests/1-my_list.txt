@@ -1,0 +1,39 @@
+>>> MyList = __import__('1-my_list').MyList
+
+"""  tests for the print_sorted """
+
+""" empty list """
+>>> print(lista)
+[]
+>>> lista.print_sorted()
+[]
+
+"""normal case""
+>>> my_list = MyList()
+>>> my_list.append(7)
+>>> my_list.append(8)
+>>> my_list.append(9)
+>>> my_list.append(0)
+>>> my_list.append(2)
+
+>>> print(my_list)
+[7, 8, 9, 0, 2]
+
+>>> my_list.print_sorted()
+[0, 2, 7, 8, 9]
+
+"""append a negative number"""
+>>> my_list.append(-5)
+
+>>> print(mylist)
+[7, 8, 9, 0, 2, -5]
+
+>>> my_list.print_sorted()
+[-5, 0, 2, 7, 8, 9]
+
+>>> new_list = list()
+>>> new_list.print_sorted()
+
+Traceback (most recent call last):
+    ...
+AttributeError: 'list' object has no attribute 'print_sorted'

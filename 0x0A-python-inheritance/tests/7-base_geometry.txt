@@ -1,0 +1,34 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> Base = BaseGeometry()
+
+>>> Base.integer_validator("hola", -1)
+
+>>> Base = BaseGeometry()
+
+>>> Base.integer_validator("como", 12)
+
+>>> Base.integer_validator("estas", -1)
+Traceback (most recent call last):
+    ...
+ValueError: estas must be greater than 0
+
+>>> Base.integer_validator("olanda", "jacinto")
+Traceback (most recent call last):
+    ...
+TypeError: olanda must be an integer
+
+>>> Base.integer_validator("algo", True)
+Traceback (most recent call last):
+    ...
+TypeError: algo must be an integer
+
+>>> Base.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> Base.integer_validator(1, 2)
+Traceback (most recent call last):
+    ...
+TypeError: name must be a string
