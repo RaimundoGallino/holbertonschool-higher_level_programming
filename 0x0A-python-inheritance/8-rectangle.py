@@ -22,6 +22,8 @@ class BaseGeometry:
 
 
 class Rectangle(BaseGeometry):
+    """define Rectangle class"""
+
     def __init__(self, width, height):
 
         self.__width = width
