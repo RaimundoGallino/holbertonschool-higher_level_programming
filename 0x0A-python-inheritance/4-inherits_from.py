@@ -7,7 +7,7 @@ from the specified class; otherwise False.
 
 
 def inherits_from(obj, a_class):
-    if (isinstance(obj, a_class) != 0):
+    if (isinstance(obj, a_class)):
         return True
     else:
-        return False
+        return issubclass(type(obj), a_class)
