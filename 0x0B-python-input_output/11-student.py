@@ -23,7 +23,8 @@ class Student:
                 if i in self.__dict__:
                     newjson[i] = self.__dict__[i]
             return newjson
+
     def reload_from_json(self, json):
         """definition reload_from_json function"""
         for key, value in json.items():
-            self.__dict__.append(key, value)
+            self.__dict__.update(key, value)
