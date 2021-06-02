@@ -3,6 +3,7 @@
 MyInt that inherits from int
 """
 
+
 class MyInt(int):
     """MyInt is a rebel. MyInt has == and != operators inverted"""
 
