@@ -15,11 +15,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """inicialization of the class"""
-        new = {}
+        newjson = {}
         if attrs is None:
             return (self.__dict__)
         else:
             for i in attrs:
                 if i in self.__dict__:
-                    new[i] = self.__dict__[i]
-            return new
+                    newjson[i] = self.__dict__[i]
+            return newjson
