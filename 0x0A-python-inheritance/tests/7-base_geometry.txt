@@ -32,3 +32,87 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
     ...
 TypeError: name must be a string
+
+# Passing a none value
+>>> Base.integer_validator("it can't be right", None)
+Traceback (most recent call last):
+    ...
+TypeError: it can't be right must be an integer
+
+# Passing a list
+>>> Base.integer_validator("now?", [1, 30, 8])
+Traceback (most recent call last):
+    ...
+TypeError: now? must be an integer
+
+#  Passing a negative value
+>>> Base.integer_validator("pepito", -16)
+Traceback (most recent call last):
+    ...
+ValueError: pepito must be greater than 0
+
+#  Passing zero
+>>> Base.integer_validator("Isaac", 0)
+Traceback (most recent call last):
+    ...
+ValueError: Isaac must be greater than 0
+
+# Passing a string
+>>> Base.integer_validator("elasti","cow")
+Traceback (most recent call last):
+    ...
+TypeError: elasti must be an integer
+
+# Passing a dictionary
+>>> Base.integer_validator("book of shadows", {10, 0})
+Traceback (most recent call last):
+    ...
+TypeError: book of shadows must be an integer
+
+# Passing a list
+>>> Base.integer_validator("kk", [8, 69])
+Traceback (most recent call last):
+    ...
+TypeError: kk must be an integer
+
+# Passing a list of lists
+>>> Base.integer_validator("matrixiz", [[8, 69], [98]])
+Traceback (most recent call last):
+    ...
+TypeError: matrixiz must be an integer
+
+# Passing a tuple
+>>> Base.integer_validator("matrixiz", (0, 2))
+Traceback (most recent call last):
+    ...
+TypeError: matrixiz must be an integer
+
+# Passing a boolean
+>>> Base.integer_validator("i'm super clever", True)
+Traceback (most recent call last):
+    ...
+TypeError: i'm super clever must be an integer
+
+# No  args for validator
+>>> Base.integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+# Giving just 1 arg for validator
+>>> Base.integer_validator("kiko")
+Traceback (most recent call last):
+    ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+# Giving an string instead of an int
+>>> Base.integer_validator("jijiji", "impostor")
+Traceback (most recent call last):
+    ...
+TypeError: jijiji must be an integer
+
+# Trying to get the area... of what???
+>>> Base.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
