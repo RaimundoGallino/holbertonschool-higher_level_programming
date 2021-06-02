@@ -26,5 +26,5 @@ class Student:
 
     def reload_from_json(self, json):
         """definition reload_from_json function"""
-        for key, value in json.items():
+        for key, value in json:
             self.__dict__.update(key, value)
