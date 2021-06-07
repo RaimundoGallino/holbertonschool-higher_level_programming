@@ -41,17 +41,17 @@ class Base:
     def save_to_file(cls, list_objs):
         """define integer_validator method"""
 
-        name = cls.__name__ + ".json"
+        name = str(cls.__name__) + ".json"
         list = []
 
         with open(name, "w", encoding="utf-8") as f:
             if list_objs is not None:
                 for i in list_objs:
-                    list.append(cls.to_json_string(i))
+                    list.append(cls.to_json_string(list(i)))
                 f.write(cls.to_json_string(list))
             else:
                 f.write(cls.to_json_string(list))
 
-    @staticmethod
-    def from_json_string(json_string):
-        
+    # @staticmethod
+    # def from_json_string(json_string):
+
