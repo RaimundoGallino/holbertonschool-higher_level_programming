@@ -47,7 +47,7 @@ class Base:
         with open(name, "w", encoding="utf-8") as f:
             if list_objs is not None:
                 for i in list_objs:
-                    list.append(cls.to_json_string(list(i)))
+                    list.append(cls.to_json_string(i))
                 f.write(cls.to_json_string(list))
             else:
                 f.write(cls.to_json_string(list))
