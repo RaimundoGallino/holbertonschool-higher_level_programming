@@ -19,6 +19,7 @@ class Rectangle(Base):
         self.__y = y
 
         self.id = id
+        parent = self
 
         super().__init__(id)
 
@@ -77,7 +78,7 @@ class Rectangle(Base):
     def __str__(self):
         '''returns the string below'''
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-         self.__x, self.__y, self.__height, self.__width)
+         self.__x, self.__y, self.__width, self.__height)
 
     def area(self):
         '''retunrs the area value'''
@@ -91,6 +92,43 @@ class Rectangle(Base):
             print(" " * self.__x, end='')
             print("#" * self.__width, end='')
             print()
+    
+    def update(self, *args, **kwargs):
+        '''updates the values of the updates'''
+        lenght_a = len(args)
+
+        if args is not None and lenght_a != 0:
+
+            if lenght_a >= 1:
+                self.id = args[0]
+            if lenght_a >= 2:
+                self.__width =  args[1]
+            if lenght_a >= 3: 
+                self.__height = args[2]
+            if lenght_a >= 4: 
+                self.__x = args[3]
+            if lenght_a == 5:
+                self.__y = args[4]
+
+        elif kwargs is not None and lenght_a == 0:
+
+            for key, value in kwargs.items():
+
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.__width = value
+                if key == "height":
+                    self.__height = value
+                if key == "x":
+                    self.__x = value
+                if key == "y":
+                    self.__y = value
+        
+    def to_dictionary(self):
+        '''updates the values of the updates'''
+        return {'x' : self.__x, 'y' : self.__y, 'id': self.id , 'height': self.__height, 'width': self.__width}
+
 
         """
         area = Rectangle.area(self)
