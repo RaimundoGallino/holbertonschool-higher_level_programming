@@ -128,25 +128,3 @@ class Rectangle(Base):
     def to_dictionary(self):
         '''updates the values of the updates'''
         return {'x' : self.__x, 'y' : self.__y, 'id': self.id , 'height': self.__height, 'width': self.__width}
-
-
-        """
-        area = Rectangle.area(self)
-        rect = ""
-        if self.__y != 0:
-            rect = "\n" * self.__y
-        for i in range(area):
-            if (i + 1) % self.__width == 0:
-                x_value = self.__x
-                if self.__x != 0:
-                    rect += " " * x_value
-                    x_value = 0
-                rect += "#" * self.__width
-            if (i + 1) == area:
-                rect += ""
-            elif (i + 1) % self.__width == 0:
-                rect += "\n"
-
-        print(rect)
-        """
-

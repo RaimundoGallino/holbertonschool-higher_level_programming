@@ -47,9 +47,9 @@ class Base:
             if list_objs is not None:
                 for i in list_objs:
                     list_j.append(cls.to_json_string(i))
-                f.write(cls.to_json_string(list_j))
+                json.dump(list_j, f)
             else:
-                f.write(cls.to_json_string(list_j))
+                json.dump(list_j, f)
 
     # @staticmethod
     # def from_json_string(json_string):
