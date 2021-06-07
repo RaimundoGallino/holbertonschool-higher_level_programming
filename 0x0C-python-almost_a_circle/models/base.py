@@ -33,9 +33,8 @@ class Base:
     def to_json_string(list_dictionaries):
         """define integer_validator method"""
         if list_dictionaries is None:
-            return "[]"
-        else:
-            return json.dumps(list_dictionaries)
+            list_dictionaries = []
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -50,8 +49,7 @@ class Base:
                     list.append(cls.to_json_string(i))
                 f.write(cls.to_json_string(list))
             else:
-                f.write(cls.to_json_string(list))
+                f.write(list)
 
     # @staticmethod
     # def from_json_string(json_string):
-
