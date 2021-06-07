@@ -41,15 +41,17 @@ class Base:
         """define integer_validator method"""
 
         name = str(cls.__name__) + ".json"
-        list = []
+        list_j = []
 
         with open(name, "w", encoding="utf-8") as f:
             if list_objs is not None:
                 for i in list_objs:
-                    list.append(cls.to_json_string(i))
-                f.write(cls.to_json_string(list))
+                    list_j.append(cls.to_json_string(i))
+                f.write(cls.to_json_string(list_j))
             else:
-                f.write(list)
+                f.write(cls.to_json_string(list_j))
 
     # @staticmethod
     # def from_json_string(json_string):
+
+
