@@ -54,10 +54,15 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """define integer_validator method"""
         if json_string is None or len(json_string) == 0:
             return []
         else:
             return json.loads(json_string)
 
-    # @classmethod
-    # def create(cls, **dictionary):
+    @classmethod
+    def create(cls, **dictionary):
+        """define integer_validator method"""
+        dummy = cls(3, 4)
+        dummy.update(**dictionary)
+        return dummy
