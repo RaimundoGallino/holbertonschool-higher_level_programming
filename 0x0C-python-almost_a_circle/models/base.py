@@ -82,7 +82,3 @@ class Base:
                 return list_j
         else:
             return list_j
-
-        
-
-
