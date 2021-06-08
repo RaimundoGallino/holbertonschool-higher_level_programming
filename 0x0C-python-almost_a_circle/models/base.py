@@ -71,4 +71,3 @@ class Base:
     # def load_from_file(cls):
     #     name = str(cls.__name__) + ".json"
     #     list_j = []
-
