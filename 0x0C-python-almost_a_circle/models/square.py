@@ -17,7 +17,7 @@ class Square(Rectangle):
     def __str__(self):
         """define Square class"""
         return"[Square] ({}) {}/{} - {}".format(self.id, self.x,
-		                                        self.y, self.size)
+                                                self.y, self.size)
 
     @property
     def size(self):
@@ -32,7 +32,7 @@ class Square(Rectangle):
         self.width = value
 
     def update(self, *args, **kwargs):
-    	'''sets the x'''
+        '''sets the x'''
 
         lenght_a = len(args)
 
