@@ -2,6 +2,7 @@
 '''file that defines the Base class'''
 
 import json
+from os import path
 
 
 class Base:
@@ -67,7 +68,21 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    # @classmethod
-    # def load_from_file(cls):
-    #     name = str(cls.__name__) + ".json"
-    #     list_j = []
+    @classmethod
+    def load_from_file(cls):
+        """create a dummy instance"""
+        name = str(cls.__name__) + ".json"
+        list_j = []
+
+        if path.exists(name):
+            with open(name, 'r', encoding='utf-8') as f:
+                content = cls.from_json_string(f.read())
+                for obj in content:
+                    list_j.append(cls.create(**obj))
+                return list_j
+        else:
+            return list_j
+
+        
+
+
