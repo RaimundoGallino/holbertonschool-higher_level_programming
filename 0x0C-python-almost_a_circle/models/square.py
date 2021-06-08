@@ -9,7 +9,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """define Square class"""
-        
+
         super().__init__(size, size, x, y, id)
 
         self.size = size
@@ -17,7 +17,7 @@ class Square(Rectangle):
     def __str__(self):
         """define Square class"""
         return"[Square] ({}) {}/{} - {}".format(self.id,
-         self.x, self.y, self.size)
+            self.x, self.y, self.size)
 
     @property
     def size(self):
@@ -40,8 +40,8 @@ class Square(Rectangle):
             if lenght_a >= 1:
                 self.id = args[0]
             if lenght_a >= 2:
-                self.size =  args[1]
-            if lenght_a >= 3: 
+                self.size = args[1]
+            if lenght_a >= 3:
                 self.x = args[2]
             if lenght_a == 4:
                 self.y = args[3]
@@ -60,5 +60,5 @@ class Square(Rectangle):
                     self.y = value
 
     def to_dictionary(self):
-            '''updates the values of the updates'''
-            return {'x' : self.x, 'y' : self.y, 'id': self.id , 'size': self.size}
+        '''updates the values of the updates'''
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.size}

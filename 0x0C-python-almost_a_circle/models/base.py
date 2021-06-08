@@ -3,9 +3,10 @@
 
 import json
 
+
 class Base:
     '''define the Base class'''
-    
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -32,7 +33,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """define integer_validator method"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             list_dictionaries = []
         return json.dumps(list_dictionaries)
 
@@ -46,12 +47,17 @@ class Base:
         with open(name, "w", encoding="utf-8") as f:
             if list_objs is not None:
                 for i in list_objs:
-                    list_j.append(cls.to_json_string(i))
-                json.dump(list_j, f)
+                    list_j.append(cls.to_dictionary(i))
+                f.write(cls.to_json_string(list_j))
             else:
-                json.dump(list_j, f)
+                f.write(cls.to_json_string(list_j))
 
-    # @staticmethod
-    # def from_json_string(json_string):
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
 
-
+    # @classmethod
+    # def create(cls, **dictionary):
