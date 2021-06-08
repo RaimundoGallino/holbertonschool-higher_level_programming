@@ -32,6 +32,7 @@ class Square(Rectangle):
         self.width = value
 
     def update(self, *args, **kwargs):
+    	'''sets the x'''
 
         lenght_a = len(args)
 
