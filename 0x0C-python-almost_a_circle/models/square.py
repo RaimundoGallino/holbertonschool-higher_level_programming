@@ -15,7 +15,7 @@ class Square(Rectangle):
     def __str__(self):
         """define Square class"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                 self.y, self.size)
+                                                 self.y, self.width)
 
     @property
     def size(self):
@@ -60,4 +60,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         '''updates the values of the updates'''
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.size}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.width}
