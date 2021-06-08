@@ -67,8 +67,8 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    @classmethod
-    def load_from_file(cls):
-        name = str(cls.__name__) + ".json"
-        list_j = []
+    # @classmethod
+    # def load_from_file(cls):
+    #     name = str(cls.__name__) + ".json"
+    #     list_j = []
 
