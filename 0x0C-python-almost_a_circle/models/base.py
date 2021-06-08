@@ -63,6 +63,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """define integer_validator method"""
-        dummy = cls(3, 4)
-        dummy.update(**dictionary)
-        return dummy
+        if dictionary is not None:
+            dummy = cls(3, 4)
+            dummy.update(**dictionary)
+            return dummy
+
+    # @classmethod
+    # def load_from_file(cls):
