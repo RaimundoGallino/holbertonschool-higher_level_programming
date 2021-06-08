@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''file that defines the Rectangle class'''
 
+
 from models.base import Base
 
 
