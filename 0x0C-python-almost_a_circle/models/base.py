@@ -62,11 +62,13 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """define integer_validator method"""
-        if dictionary is not None:
-            dummy = cls(3, 4)
-            dummy.update(**dictionary)
-            return dummy
+        """create a dummy instance"""
+        dummy = cls(3, 4) if cls.__name__ == "Rectangle" else cls(3)
+        dummy.update(**dictionary)
+        return dummy
 
-    # @classmethod
-    # def load_from_file(cls):
+    @classmethod
+    def load_from_file(cls):
+        name = str(cls.__name__) + ".json"
+        list_j = []
+
