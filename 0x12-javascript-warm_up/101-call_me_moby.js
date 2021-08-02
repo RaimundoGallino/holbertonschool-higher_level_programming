@@ -2,7 +2,7 @@
 
 exports.callMeMoby = callMeMoby;
 
-function (x, theFunction) {
+function callMeMoby (x, theFunction) {
     for (let i = 0; i < x; i++) {
         theFunction();
     }
