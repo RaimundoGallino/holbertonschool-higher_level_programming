@@ -7,6 +7,6 @@ if (args == 2) {
 if (args == 3) {
   console.log('Argument found');
 }
-if (args == 4) {
+if (args >= 4) {
   console.log('Arguments found');
 }
