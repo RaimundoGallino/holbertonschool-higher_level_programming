@@ -9,10 +9,10 @@ const secondMax = function (arr) {
   return secondMax;
 };
 
-const num_array = process.argv.splice(2, process.argv.length);
+const numArr = process.argv.splice(2, process.argv.length);
 
-num_array.map(function (item) {
+numArr.map(function (item) {
   return parseInt(item, 10);
 });
 
-console.log(secondMax(num_array));
+console.log(secondMax(numArr));
