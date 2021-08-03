@@ -15,5 +15,5 @@ class Square extends Rectangle {
       console.log(char.repeat(this.height));
     }
   }
-};
+}
 module.exports = Square;
