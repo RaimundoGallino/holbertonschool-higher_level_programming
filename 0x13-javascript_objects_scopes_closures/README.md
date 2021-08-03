@@ -6,7 +6,7 @@
 **Read or watch**:
 
 -   [JavaScript object basics](https://intranet.hbtn.io/rltoken/OJ4pU6uHwfCrAclbZsk_Hg "JavaScript object basics")
--   [Object-oriented JavaScript](https://intranet.hbtn.io/rltoken/Uqv-UMsBUpHWQZXBf5fn0g "Object-oriented JavaScript") (_**read all examples!**_)
+-   [Object-oriented JavaScript](https://intranet.hbtn.io/rltoken/Uqv-UMsBUpHWQZXBf5fn0g "Object-oriented JavaScript")
 -   [Class - ES6](https://intranet.hbtn.io/rltoken/zMWxOmGWEsOCldCKeDswCA "Class - ES6")
 -   [super - ES6](https://intranet.hbtn.io/rltoken/DTMKogwFYEgUnpLrNvTcfQ "super - ES6")
 -   [extends - ES6](https://intranet.hbtn.io/rltoken/fh2JHfNNa-HLnmfSdOo9TA "extends - ES6")
