@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import MySQLdb
 
 serv = MySQLdb.connect(host = "localhost", user = "root", passwd = "root")
