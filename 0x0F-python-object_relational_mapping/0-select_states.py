@@ -1,12 +1,16 @@
 #!/usr/bin/python3
 
+"""Show the table states from indicated database"""
+
 import MySQLdb
+from sys import argv
 
-serv = MySQLdb.connect(host = "localhost", user = "root", passwd = "root")
+if __name__ == "__main__":
 
-c = serv.cursor()
-c.execute("SHOW DATABASES")
-l = c.fetchall()
-print l
-l = [ i[0] for i in l ]
-print l
+    serv = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+
+    c = serv.cursor()
+    c.execute("SELECT * FROM states")
+    l = c.fetchall()
+    for i in l:
+        print (i)
