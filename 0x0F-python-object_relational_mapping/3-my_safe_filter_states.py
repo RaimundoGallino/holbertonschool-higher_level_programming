@@ -10,7 +10,7 @@ if __name__ == "__main__":
     serv = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
 
     c = serv.cursor()
-    c.execute("SELECT * FROM states WHERE name = %(name)s", {'name' = argv[4]})
+    c.execute("SELECT * FROM states WHERE name = %(name)s", {'name': argv[4]})
     l = c.fetchall()
     for i in l:
         le = len(i[1]) - 1
