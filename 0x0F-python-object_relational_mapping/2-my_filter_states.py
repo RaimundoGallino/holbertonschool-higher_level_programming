@@ -17,3 +17,4 @@ if __name__ == "__main__":
         state = i[1]
         if state == argv[4]:
             print (i)
+    serv.close()
