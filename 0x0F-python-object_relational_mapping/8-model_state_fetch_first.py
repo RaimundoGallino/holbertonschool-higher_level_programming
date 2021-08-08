@@ -18,7 +18,12 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    for state in session.query(State).filter(State.id.in_(['1'])).all():
-        print("{}: {}".format(state.id, state.name))
+    element = session.query(State).filter(State.id.in_(['1'])).all()
+
+    for state in element:
+        if element:
+            print("{}: {}".format(state.id, state.name))
+        else:
+            print("Nothing")
 
     session.close()
