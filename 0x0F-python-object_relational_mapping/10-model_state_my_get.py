@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     search = argv[4]
 
-    element = session.query(State).order_by(State.id).filter_by(name=argv[4]).first()
+    element = session.query(State).filter_by(name=argv[4]).first()
     if element:
         print(element.id)
     else:
