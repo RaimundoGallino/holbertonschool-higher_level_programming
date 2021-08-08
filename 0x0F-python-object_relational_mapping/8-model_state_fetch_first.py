@@ -18,12 +18,10 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    element = session.query(State).filter(State.id.in_(['1'])).all()
-
-    for state in element:
-        if element:
-            print("{}: {}".format(state.id, state.name))
-        else:
-            print("Nothing")
+    element = session.query(State).filter(State.id.in_(['1'])).first()
+    if element:
+        print("{}: {}".format(element.id, element.name))
+    else:
+        print("Nothing")
 
     session.close()
