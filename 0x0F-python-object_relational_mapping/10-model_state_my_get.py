@@ -21,6 +21,9 @@ if __name__ == "__main__":
     search = argv[4]
 
     element = session.query(State).order_by(State.id).filter_by(name=argv[4]).first()
-    print(element.id)
+    if element:
+        print(element.id)
+    else:
+        print("Not Found")
 
     session.close()
