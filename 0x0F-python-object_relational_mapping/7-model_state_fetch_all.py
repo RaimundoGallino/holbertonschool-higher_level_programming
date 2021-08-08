@@ -2,7 +2,7 @@
 """Show states content
 """
 from model_state import Base, State
-
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
