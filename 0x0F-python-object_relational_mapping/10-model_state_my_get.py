@@ -18,8 +18,6 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    search = argv[4]
-
     element = session.query(State).filter_by(name=argv[4]).first()
     if element:
         print(element.id)
