@@ -11,9 +11,9 @@ if __name__ == "__main__":
 
     c = serv.cursor()
     c.execute("SELECT * FROM states")
-    l = c.fetchall()
-    for i in l:
+    cl = c.fetchall()
+    for i in cl:
         le = len(i[1]) - 1
         state = i[1]
         if state[0:-le] == 'N':
-            print (i)
+            print(i)

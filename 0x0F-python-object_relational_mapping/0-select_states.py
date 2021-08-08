@@ -11,6 +11,6 @@ if __name__ == "__main__":
 
     c = serv.cursor()
     c.execute("SELECT * FROM states")
-    l = c.fetchall()
-    for i in l:
-        print (i)
+    cl = c.fetchall()
+    for i in cl:
+        print(i)
