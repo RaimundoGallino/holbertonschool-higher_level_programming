@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """Show states content
 """
+
+
+from sys import argv
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
 engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                       .format("root", "root", "my_db"),
+                       .format(argv[1], argv[2], argv[3]),
                        pool_pre_ping=True)
 
 Base.metadata.create_all(engine)
