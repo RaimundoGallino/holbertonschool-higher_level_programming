@@ -4,6 +4,7 @@
 
 from sys import argv
 from model_state import Base, State
+from model_city import Base, City
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import (create_engine)
 
@@ -18,7 +19,8 @@ if __name__ == "__main__":
     Session = sessionmaker(engine)
     session = Session()
 
-    for state ,city in session.query(State, City).order_by(City.cities_id).filter(State.id == City.state_id).all():
+    for state, city in session.query(State, City)filter(State.id ==
+                                                        City.state_id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
