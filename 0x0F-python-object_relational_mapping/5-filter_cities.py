@@ -13,7 +13,8 @@ if __name__ == "__main__":
     c.execute("""SELECT cities.id, cities.name, states.name
                     FROM cities
                     JOIN states ON cities.state_id = states.id
-                    WHERE states.name = %(name)s""", {'name': argv[4]})
+                    WHERE states.name = %(name)s
+                    ORDER BY cities.id""", {'name': argv[4]})
     cl = c.fetchall()
     le = len(cl) - 1
     if le == 0:
