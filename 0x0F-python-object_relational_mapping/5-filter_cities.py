@@ -15,12 +15,12 @@ if __name__ == "__main__":
                     JOIN states ON cities.state_id = states.id
                     WHERE states.name = %(name)s""", {'name': argv[4]})
     cl = c.fetchall()
-    le = len(l) - 1
+    le = len(cl) - 1
     if le == 0:
         print()
     else:
         for i in range(le):
-            print("{}, ".format(l[i][1]), end="")
-        print("{}".format(l[le][1]))
+            print("{}, ".format(cl[i][1]), end="")
+        print("{}".format(cl[le][1]))
 
     serv.close()
