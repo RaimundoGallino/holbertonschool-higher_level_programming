@@ -17,11 +17,14 @@ if __name__ == "__main__":
                     ORDER BY cities.id""", {'name': argv[4]})
     cl = c.fetchall()
     le = len(cl) - 1
-    if le == 0:
+    if le == - 1:
         print()
     else:
         for i in range(le):
             print("{}, ".format(cl[i][1]), end="")
-        print("{}".format(cl[le][1]))
+        if cl[le][1]:
+            print("{}".format(cl[le][1]))
+        else:
+            print()
 
     serv.close()
