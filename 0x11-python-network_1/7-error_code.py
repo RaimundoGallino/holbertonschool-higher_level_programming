@@ -8,6 +8,7 @@ to the URL and displays the body of the response (decoded in utf-8).
 import requests
 from sys import argv
 
+
 if __name__ == "__main__":
     bad_r = requests.get(argv[1])
     if str(bad_r.status_code) != '200':
