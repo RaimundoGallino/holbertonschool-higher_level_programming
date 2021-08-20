@@ -9,7 +9,7 @@ import requests
 from sys import argv
 
 bad_r = requests.get(argv[1])
-if str(bad_r.status_code) != 200:
+if str(bad_r.status_code) != '200':
     print('Error Code: ' + str(bad_r.status_code))
 else:
     print(r.text)
