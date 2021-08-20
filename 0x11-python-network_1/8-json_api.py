@@ -17,7 +17,7 @@ if __name__ == "__main__":
     data = {'q': q}
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=data)
-    if r.text != "":
+    if r.text != {}:
         try:
             jn = r.json()
         except:
@@ -25,7 +25,6 @@ if __name__ == "__main__":
         id = jn.get('id')
         name = jn.get('name')
         print(jn)
-        print(r.text)
     elif len(jn) == 0 or id is None or name is None:
         print('No result')
     else:
