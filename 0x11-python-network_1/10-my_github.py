@@ -11,7 +11,7 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    token = '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'
+    token = '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'
     owner = argv[1]
     repo = argv[2]
     query_url = f"https://api.github.com/repos/{owner}/{repo}"
