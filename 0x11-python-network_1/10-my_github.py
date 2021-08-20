@@ -11,13 +11,9 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    token = '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'
+    token = argv[2]
     owner = argv[1]
-    repo = argv[2]
-    query_url = f"https://api.github.com/repos/{owner}/{repo}"
-    params = {
-        "state": "open",
-    }
-    headers = {'Authorization': f'token {token}'}
-    r = requests.get(query_url, headers=headers, params=params)
-    print(r.json()['id'])
+    query_url = f"https://api.github.com/user"
+
+    r = requests.get(query_url, auth=(owner, token))
+    print(r.json().get('id'))
