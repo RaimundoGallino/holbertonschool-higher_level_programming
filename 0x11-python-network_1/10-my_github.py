@@ -14,6 +14,9 @@ if __name__ == "__main__":
     token = argv[2]
     owner = argv[1]
     query_url = "https://api.github.com/user"
-
-    r = requests.get(query_url, auth=(owner, token))
+    params = {
+        "state": "open",
+    }
+    headers = {'Authorization': 'token {}'.format(token)}
+    r = requests.get(query_url, headers=headers, params=params)
     print(r.json().get('id'))
