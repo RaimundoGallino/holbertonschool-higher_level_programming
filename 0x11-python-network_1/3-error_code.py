@@ -17,5 +17,5 @@ if __name__ == "__main__":
             code = response.getcode()
             print(code)
     except urllib.error.HTTPError  as e:
-        lprint(e)
+        print(e)
 
