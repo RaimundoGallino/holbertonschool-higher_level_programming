@@ -17,14 +17,13 @@ if __name__ == "__main__":
     data = {'q': q}
 
     r = requests.post('http://0.0.0.0:5000/search_user', data=data)
-    if r.text != {}:
+    if r.text != "":
         try:
             jn = r.json()
         except:
             print('Not a valid JSON')
         id = jn.get('id')
         name = jn.get('name')
-        print(jn)
     if len(jn) == 0 or id is None or name is None:
         print('No result')
     else:
