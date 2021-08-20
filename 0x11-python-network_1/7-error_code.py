@@ -12,6 +12,6 @@ from sys import argv
 if __name__ == "__main__":
     bad_r = requests.get(argv[1])
     if bad_r.status_code >= 400:
-        print('Error Code: ' + str(bad_r.status_code))
+        print('Error Code: {:d}'.format(bad_r.status_code))
     else:
         print(bad_r.text)
