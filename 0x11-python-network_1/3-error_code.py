@@ -14,8 +14,7 @@ if __name__ == "__main__":
     url = argv[1]
     try:
         with urllib.request.urlopen(url) as response:
-            code = response.getcode()
-            print(code)
+            code = response
     except urllib.error.HTTPError  as e:
-        print(e)
+        print(e.decode('utf-8'))
 
