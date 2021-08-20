@@ -12,7 +12,8 @@ from sys import argv
 if __name__ == "__main__":
     if len(argv) != 1:
         q = argv[1]
-    else: q = ""
+    else:
+        q = ""
 
     data = {'q': q}
 
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     if r.text != "":
         try:
             jn = r.json()
-        except:
+        except Error:
             print('Not a valid JSON')
         id = jn.get('id')
         name = jn.get('name')
