@@ -8,5 +8,7 @@ to the URL and displays the body of the response (decoded in utf-8).
 import requests
 from sys import argv
 
-r = requests.get(argv[1])
-print(r.headers.get('X-Request-Id'))
+
+if __name__ == "__main__":
+    r = requests.get(argv[1])
+    print(r.headers.get('X-Request-Id'))
