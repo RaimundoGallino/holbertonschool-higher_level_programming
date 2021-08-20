@@ -10,6 +10,12 @@ from sys import argv
 
 
 if __name__ == "__main__":
+    url = argv[1]
+    try:
+        with urllib.request.urlopen(url) as response:
+            log(fh, response.code, url)
+    except urllib.error.HTTPError  as e:
+        log(fh, e.code, url)
 
-    with urllib.error.URLError.urlopen(argv[1]) as e:
+    with urllib.request.urlopen(argv[1]) as e:
         print (e)
