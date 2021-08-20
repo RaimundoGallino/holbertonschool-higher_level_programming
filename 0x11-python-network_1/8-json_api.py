@@ -24,6 +24,7 @@ if __name__ == "__main__":
             print('Not a valid JSON')
         id = jn.get('id')
         name = jn.get('name')
+        print(jn)
     elif len(jn) == 0 or id is None or name is None:
         print('No result')
     else:
