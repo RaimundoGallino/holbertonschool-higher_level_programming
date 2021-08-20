@@ -10,5 +10,4 @@ from sys import argv
 
 bad_r = requests.get(argv[1])
 
-bad_r.raise_for_status()
 print('Error Code: ' + str(bad_r.status_code))
