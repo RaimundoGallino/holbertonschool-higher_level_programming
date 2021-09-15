@@ -10,7 +10,7 @@ request.get({ url: url }, function (err, res, body) {
   let count = 0;
   const json = JSON.parse(body);
   json.results.forEach(element => {
-    if (element.characters.includes('https://swapi-api.hbtn.io/api/people/18/') || element.characters.includes('http://swapi-api.hbtn.io/api/people/18/')) {
+    if (element.characters.includes('https://swapi-api.hbtn.io/api/people/18/') || element.characters.includes('http://swapi.co/api/people/18/')) {
       count++;
     }
   });
